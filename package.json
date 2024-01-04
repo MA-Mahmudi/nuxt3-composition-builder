@@ -1,0 +1,15 @@
+{
+  "name": "vue-composation-api-builder",
+  "version": "1.0.0",
+  "description": "This package creates a whole composition API section for you.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aminemun_18",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0"
+  }
+}
