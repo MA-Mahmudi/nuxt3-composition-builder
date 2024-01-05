@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "vue-composition-builder": "./main.js"
+  },
+
   "keywords": [],
   "author": "Aminemun_18",
   "license": "ISC",
+
   "dependencies": {
-    "@inquirer/prompts": "^3.3.0"
+    "commander": "^11.1.0"
   }
 }

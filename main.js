@@ -1,18 +1,8 @@
-const {input, select} = require("@inquirer/prompts")
 const fs = require("node:fs")
+const {program} = require("commander")
 const exe = require("./exeProcess")
 const {capFirst} = require("./cap-first-letter")
 
-const storeChoices = [
-  {
-    name: "Pinia store",
-    value: "pinia"
-  },
-  {
-    name: "VueX store",
-    value: "vuex"
-  },
-]
 const filesToCreate = [
   {
     appendToStart: "",
@@ -47,8 +37,13 @@ const generateFilesName = (name) => {
 const questions = async () => {
   const config = {}
 
-  config.name = await input({message: "What's the name of your composition hook?"})
-  config.store = await select({message: "What state manager do you use?", choices: storeChoices})
+  await program.version("1.0.0").command("create <name>").description("Creates a composition API in a directory. (based on our structure)")
+    .action(name => {
+      if (!!name){
+        config.name = name
+      }
+    })
+  program.parse(process.argv);
 
   return config
 }
@@ -56,7 +51,7 @@ const questions = async () => {
 questions().then(async (res) => {
   let basePath = ""
   basePath = await new Promise((resolve, reject) => {
-    exe.result("sh t1.sh", (err, response) => {
+    exe.result("git rev-parse --show-toplevel", (err, response) => {
       if (!err) {
         basePath = `${response.replace("\n", "")}/composable/`
         resolve(basePath)
