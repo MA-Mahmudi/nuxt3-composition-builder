@@ -4,7 +4,7 @@
 
 This package in just a fun project which makes our jub easier. For now, it's just compatible with 
 pinia state manager. The in use structure, we found it perfect for our usage in which everything 
-is separated from all other things. You can see it [below](#The%20structure%20is%20as%20following) 
+is separated from all other things. You can see it [below](#The-structure-is-as-following) 
 
 ## Installation 
 We recommend you to install the package globally for using it in all your projects.
