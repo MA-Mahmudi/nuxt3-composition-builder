@@ -1,20 +1,16 @@
 {
   "name": "nuxt3-composition-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package creates a whole composition API section for you.",
-  "main": "main.js",
+  "main": "dist/index.js",
+  "author": "Aminemun_18",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-test": "node main.j"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "nuxt3-composition-builder": "bin/main.js"
+    "nuxt3-composition-builder": "dist/index.js"
   },
-
-  "keywords": [],
-  "author": "Aminemun_18",
-  "license": "ISC",
-
   "dependencies": {
     "commander": "^11.1.0"
   }
