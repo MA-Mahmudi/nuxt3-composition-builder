@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require("node:fs")
 const exe = require("./exe-process")
 const {clientApp} = require("./client-app");
