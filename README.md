@@ -1,6 +1,5 @@
 # Nuxt3 composition builder
 
----
 
 This package in just a fun project which makes our jub easier. For now, it's just compatible with 
 pinia state manager. The in use structure, we found it perfect for our usage in which everything 
@@ -13,7 +12,6 @@ We recommend you to install the package globally for using it in all your projec
 npm install -g nuxt3-composition-builder
 ```
 
----
 
 ## Usage
 After installation and navigating to your project root directory, just run `nuxt3-composition-builder create <name>`.
