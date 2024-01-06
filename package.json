@@ -1,13 +1,14 @@
 {
-  "name": "vue-composation-api-builder",
+  "name": "nuxt3-composition-builder",
   "version": "1.0.0",
   "description": "This package creates a whole composition API section for you.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "node main.j"
   },
   "bin": {
-    "vue-composition-builder": "./main.js"
+    "nuxt3-composition-builder": "bin/main.js"
   },
 
   "keywords": [],
