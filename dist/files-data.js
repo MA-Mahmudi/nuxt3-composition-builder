@@ -20,8 +20,14 @@ module.exports.filesToCreate = [
       "export const useNAMEStore = defineStore('LOWER_CASE_NAME', {\n" +
       "    state: defaultState,\n" +
       "    getters: {\n" +
+      "        // getExample(state) {\n" +
+      "        //     return state\n" +
+      "        // }\n" +
       "    },\n" +
       "    actions: {\n" +
+      "        // setExample(newValue) {\n" +
+      "        //     this.example = newValue\n" +
+      "        // }\n" +
       "    },\n" +
       "})\n"
   },
