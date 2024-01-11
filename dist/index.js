@@ -10,7 +10,7 @@ clientApp().then(async (res) => {
   basePath = await new Promise((resolve, reject) => {
     exe.result("git rev-parse --show-toplevel", (err, response) => {
       if (!err) {
-        basePath = `${response.replace("\n", "")}/composable`
+        basePath = `${response.replace("\n", "")}/composables`
         resolve(basePath)
       } else {
         reject(err)

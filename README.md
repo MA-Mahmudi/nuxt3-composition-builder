@@ -19,18 +19,17 @@ After installation and navigating to your project root directory, just run `nuxt
 
 ### The structure is as following:
 ```
-root-|
-     |
-     |
-     composition-|
-                 |
-                 |
-                 name-|
-                      |
-                      useName.ts
-                      name.store.ts
-                      name.interface.ts
-                      useName.service.ts
+├── src
+│   ├── composables
+│      ├── [NAME]
+│         ├── useName.ts
+│         ├── name.store.ts
+│         ├── name.interface.ts
+│         └── useName.service.ts
+│
+├── node_modules
+├── package.json
+└── package-lock.json
 ```
 
 ## TO-DO
