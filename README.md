@@ -7,7 +7,7 @@ is separated from all other things.
 You can see it [below](#The-structure-is-as-following).
 
 ## Installation 
-We recommend you to install the package globally for using it in all your projects.
+We recommend you to install the package globally for using it in all your projects; For the best user experience it's better to set an alias for the command.
 
 ```
 npm install -g nuxt3-composition-builder
@@ -25,7 +25,7 @@ After installation and navigating to your project root directory, just run `nuxt
 │         ├── useName.ts
 │         ├── name.store.ts
 │         ├── name.interface.ts
-│         └── useName.service.ts
+│         └── name.service.ts
 │
 ├── node_modules
 ├── package.json

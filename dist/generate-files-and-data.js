@@ -1,15 +1,16 @@
-const {capFirst} = require("./cap-first-letter");
+const {capFirst, kebabToCamel} = require("./cap-first-letter");
 const fs = require("node:fs");
 const {filesToCreate} = require("./files-data");
 
 module.exports.generateFilesName = (name, list) => {
   let result = []
   list.forEach(item => {
-    const tempData = item.data.replace("NAME", capFirst(name)).replace("LOWER_CASE_NAME", name)
+    const camelName = kebabToCamel(name)
+    const tempData = item.data.replaceAll("CAMEL_NAME", capFirst(camelName)).replaceAll("LOWER_CASE_NAME", camelName)
     if (!item.appendToStart) {
-      result.push({name: `${name}${item.appendToEnd}`, data: tempData})
+      result.push({name: `${camelName}${item.appendToEnd}`, data: tempData})
     } else {
-      const temp = capFirst(name)
+      const temp = capFirst(camelName)
       result.push({name: `${item.appendToStart}${temp}${item.appendToEnd}`, data: tempData})
     }
   })
@@ -19,6 +20,7 @@ module.exports.generateFilesName = (name, list) => {
 module.exports.createFiles = (path, res) => {
   fs.mkdir(path, {}, (err) => {
     if (!err) {
+      console.log(res.name);
       const listData = this.generateFilesName(res.name, filesToCreate)
 
       for (let i = 0; i < listData.length; i++) {

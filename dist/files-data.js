@@ -1,7 +1,7 @@
 module.exports.filesToCreate = [
   {
     appendToStart: "",
-    appendToEnd: ".interface.ts",
+    appendToEnd: ".type.ts",
     data: "" +
       "// export interface IExample{\n" +
       "//\n" +
@@ -13,42 +13,30 @@ module.exports.filesToCreate = [
     data: "" +
       "import {defineStore} from 'pinia'\n" +
       "\n" +
-      "const defaultState = () => ({\n" +
+      "const defaultCAMEL_NAMEState = () => ({\n" +
       "\n" +
       "})\n" +
       "\n" +
-      "export const useNAMEStore = defineStore('LOWER_CASE_NAME', {\n" +
-      "    state: defaultState,\n" +
-      "    getters: {\n" +
-      "        // getExample(state) {\n" +
-      "        //     return state\n" +
-      "        // }\n" +
-      "    },\n" +
-      "    actions: {\n" +
-      "        // setExample(newValue) {\n" +
-      "        //     this.example = newValue\n" +
-      "        // }\n" +
-      "    },\n" +
+      "export const useCAMEL_NAMEStore = defineStore('LOWER_CASE_NAME', {\n" +
+      "    state: defaultCAMEL_NAMEState\n"+
       "})\n"
   },
   {
-    appendToStart: "use",
+    appendToStart: "",
     appendToEnd: ".service.ts",
     data: "" +
-      "export const useNAMEService = () => {\n" +
+      "export const useCAMEL_NAMEService = () => {\n" +
       "\n" +
-      "    return{\n" +
-      "    }\n" +
+      "    return{}\n" +
       "}"
   },
   {
     appendToStart: "use",
     appendToEnd: ".ts",
     data: "" +
-      "export const useNAME = () => {\n" +
+      "export const useCAMEL_NAME = () => {\n" +
       "\n" +
-      "    return{\n" +
-      "    }\n" +
+      "    return{}\n" +
       "}"
   },
 ]
